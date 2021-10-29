@@ -38,8 +38,8 @@ server.login(ton_email, mot_de_pass)
 
 i=1
 for email_ in emails:
-    server.sendmail(ton_email, email_, msg.as_string())
     msg['To'] = email_
+    server.sendmail(ton_email, email_, msg.as_string())
     print(i,"- l'email à: ",email_, "est envoyé!")
     i+=1
     time.sleep(15)
